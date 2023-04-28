@@ -11,6 +11,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.time.LocalDateTime;
 import java.util.Arrays;
 
 @SpringBootApplication
@@ -26,7 +27,7 @@ public class BackendWebshopAssignmentApplication {
         SpringApplication.run(BackendWebshopAssignmentApplication.class, args);
     }
 
-    /*
+
     @Bean
     public CommandLineRunner bootstrap(CustomerRepo customerRepo, ItemRepo itemRepo, OrderRepo orderRepo) {
 
@@ -52,9 +53,9 @@ public class BackendWebshopAssignmentApplication {
             itemRepo.save(i3);
             itemRepo.save(i4);
 
-            CustomerOrder o1 = new CustomerOrder(c1, Arrays.asList(i1, i2));
-            CustomerOrder o2 = new CustomerOrder(c2, Arrays.asList(i1, i4));
-            CustomerOrder o3 = new CustomerOrder(c3, Arrays.asList(i3, i3));
+            CustomerOrder o1 = new CustomerOrder(c1, Arrays.asList(i1, i2), LocalDateTime.now());
+            CustomerOrder o2 = new CustomerOrder(c2, Arrays.asList(i1, i4), LocalDateTime.now());
+            CustomerOrder o3 = new CustomerOrder(c3, Arrays.asList(i3, i3), LocalDateTime.now());
 
             orderRepo.save(o1);
             orderRepo.save(o2);
@@ -64,6 +65,6 @@ public class BackendWebshopAssignmentApplication {
         };
     }
 
-     */
+
 
 }
