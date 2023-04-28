@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.List;
 
 @SpringBootApplication
 public class BackendWebshopAssignmentApplication {
@@ -28,7 +29,7 @@ public class BackendWebshopAssignmentApplication {
     }
 
 
-    @Bean
+   /* @Bean
     public CommandLineRunner bootstrap(CustomerRepo customerRepo, ItemRepo itemRepo, OrderRepo orderRepo) {
 
         return (args) -> {
@@ -53,9 +54,13 @@ public class BackendWebshopAssignmentApplication {
             itemRepo.save(i3);
             itemRepo.save(i4);
 
-            CustomerOrder o1 = new CustomerOrder(c1, Arrays.asList(i1, i2), LocalDateTime.now());
-            CustomerOrder o2 = new CustomerOrder(c2, Arrays.asList(i1, i4), LocalDateTime.now());
-            CustomerOrder o3 = new CustomerOrder(c3, Arrays.asList(i3, i3), LocalDateTime.now());
+            List<Item> il1 = Arrays.asList(i1, i2);
+            List <Item> il2 = Arrays.asList(i1, i4);
+            List<Item> il3 = Arrays.asList(i3, i3);
+
+            CustomerOrder o1 = new CustomerOrder(c1, il1, LocalDateTime.now());
+            CustomerOrder o2 = new CustomerOrder(c2, il2, LocalDateTime.now());
+            CustomerOrder o3 = new CustomerOrder(c3, il3, LocalDateTime.now());
 
             orderRepo.save(o1);
             orderRepo.save(o2);
@@ -63,7 +68,7 @@ public class BackendWebshopAssignmentApplication {
 
             System.out.println("Bootstrap Loaded");
         };
-    }
+    }*/
 
 
 
