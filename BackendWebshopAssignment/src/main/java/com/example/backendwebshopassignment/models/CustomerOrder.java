@@ -26,4 +26,8 @@ public class CustomerOrder {
     @JoinTable
     private List<Item> itemList;
 
+    public CustomerOrder(Customer customer, List<Item> itemList) {
+        this.customer = customer;
+        this.itemList = itemList;
+    }
 }
