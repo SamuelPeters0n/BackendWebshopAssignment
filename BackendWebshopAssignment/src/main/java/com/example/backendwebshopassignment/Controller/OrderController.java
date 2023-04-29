@@ -3,12 +3,15 @@ package com.example.backendwebshopassignment.Controller;
 
 import com.example.backendwebshopassignment.models.Customer;
 import com.example.backendwebshopassignment.models.CustomerOrder;
+import com.example.backendwebshopassignment.models.Item;
 import com.example.backendwebshopassignment.repository.CustomerRepo;
 import com.example.backendwebshopassignment.repository.ItemRepo;
 import com.example.backendwebshopassignment.repository.OrderRepo;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -34,10 +37,20 @@ public class OrderController {
         return orderRepo.findByCustomerId(customerId);
     }
 
-    @PostMapping("/items/buy")
-    public String addCustomer(@RequestBody CustomerOrder order){
-        orderRepo.save(order);
-        return "New order for " + order.getCustomer().getName() + " has been saved.";
+    @PostMapping("/items/{itemId}/buy/{customerId}")
+    public String addOrder(@PathVariable Long itemId, @PathVariable Long customerId){
+        Item item = itemRepo.findById(itemId).orElse(null);
+        List<Item> itemList = Arrays.asList(item);
+        Customer customer = customerRepo.findById(customerId).orElse(null);
+        if(customer == null || item == null){
+            return "Customer or item does not exist";
+        }
+        else {
+            CustomerOrder order = new CustomerOrder(customer, itemList, LocalDateTime.now());
+            orderRepo.save(order);
+        }
+
+        return "New order for product " + item.getName() + " by customer " + customer.getName() + " has been saved.";
     }
 
 }
