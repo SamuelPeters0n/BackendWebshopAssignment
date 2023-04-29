@@ -7,6 +7,7 @@ import lombok.Data;
 
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -26,9 +27,12 @@ public class CustomerOrder {
     @JoinTable
     private List<Item> itemList;
 
-    public CustomerOrder(Customer customer, List<Item> itemList) {
+    private LocalDateTime date;
+
+    public CustomerOrder(Customer customer, List<Item> itemList, LocalDateTime date) {
         this.customer = customer;
         this.itemList = itemList;
+        this.date = date;
     }
 
 
