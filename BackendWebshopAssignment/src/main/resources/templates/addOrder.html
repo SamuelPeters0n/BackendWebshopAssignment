@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tbody>
+    <h2 class="Products" th:unless="${#lists.isEmpty(items)}"></h2>
+    <tr th:each="item :${items}">
+    <td th:text="${item.name}"></td>
+    </tr>
+    </tbody>
+
+</table>
+
+</body>
+</html>

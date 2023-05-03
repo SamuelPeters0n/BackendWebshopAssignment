@@ -29,7 +29,7 @@ public class BackendWebshopAssignmentApplication {
     }
 
 
-   /* @Bean
+    /*@Bean
     public CommandLineRunner bootstrap(CustomerRepo customerRepo, ItemRepo itemRepo, OrderRepo orderRepo) {
 
         return (args) -> {

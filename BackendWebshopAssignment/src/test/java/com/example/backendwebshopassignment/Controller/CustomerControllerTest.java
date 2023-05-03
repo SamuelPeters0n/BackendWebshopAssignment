@@ -17,7 +17,6 @@ import java.util.Arrays;
 import java.util.Optional;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.mockito.ArgumentMatchers.contains;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -59,7 +58,7 @@ public class CustomerControllerTest {
     @Test
     public void findCustomerById() throws Exception {
 
-        this.mockMvc.perform(get("/customer/1"))
+        this.mockMvc.perform(get("/customers/1"))
                 .andExpect(status().isOk())
                 .andExpect(content().json(asJsonString(customerRepo.findById(1L).orElse(null))));
 
@@ -81,12 +80,7 @@ public class CustomerControllerTest {
 
     @Test
     public void testAddCustomer() throws Exception {
-
-        Customer customer = new Customer("testPerson", "9999");
-
-        this.mockMvc.perform(post("/add_customer/postMap")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(asJsonString(customer)))
+        this.mockMvc.perform(get("/addCustomer?name=testPerson&ssn=9999"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Customer testPerson has been saved.")));
 

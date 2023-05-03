@@ -2,18 +2,15 @@ package com.example.backendwebshopassignment.Controller;
 
 
 import com.example.backendwebshopassignment.models.Customer;
-import com.example.backendwebshopassignment.models.CustomerOrder;
-import com.example.backendwebshopassignment.models.Item;
 import com.example.backendwebshopassignment.repository.CustomerRepo;
 import com.example.backendwebshopassignment.repository.ItemRepo;
 import com.example.backendwebshopassignment.repository.OrderRepo;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-@RestController
+@Controller
 public class CustomerController {
 
     private final ItemRepo itemRepo;
@@ -27,17 +24,23 @@ public class CustomerController {
     }
 
     @RequestMapping("/customers")
-    public List<Customer> allCustomers(){return customerRepo.findAll();}
+    public @ResponseBody List<Customer> allCustomers(){return customerRepo.findAll();}
 
-    @RequestMapping("/customer/{id}")
-    public Customer getCustomer(@PathVariable long id) {
+    @RequestMapping("/customers/{id}")
+    public @ResponseBody Customer getCustomer(@PathVariable long id) {
     return customerRepo.findById(id).orElse(null);
     }
 
-    @PostMapping("/add_customer/postMap")
-    public String addCustomer(@RequestBody Customer customer){
+    @GetMapping("/addCustomer")
+    public @ResponseBody String addCustomer(@RequestParam String name, @RequestParam String ssn){
+        Customer customer = new Customer(name, ssn);
         customerRepo.save(customer);
         return "Customer " + customer.getName() + " has been saved.";
+    }
+
+    @GetMapping("/addCustomer/form")
+    public String addCostumerForm() {
+        return "addCustomer";
     }
 
 
