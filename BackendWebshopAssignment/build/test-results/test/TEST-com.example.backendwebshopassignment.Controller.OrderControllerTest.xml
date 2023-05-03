@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.backendwebshopassignment.Controller.OrderControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-05-03T08:13:14" hostname="Sticker-PC" time="0.065">
+  <properties/>
+  <testcase name="getCostumerOrder()" classname="com.example.backendwebshopassignment.Controller.OrderControllerTest" time="0.015"/>
+  <testcase name="findOrders()" classname="com.example.backendwebshopassignment.Controller.OrderControllerTest" time="0.037"/>
+  <testcase name="BuyItem()" classname="com.example.backendwebshopassignment.Controller.OrderControllerTest" time="0.012"/>
+  <system-out><![CDATA[2023-05-03T10:13:13.585+02:00  INFO 29181 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.backendwebshopassignment.Controller.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-03T10:13:13.587+02:00  INFO 29181 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.backendwebshopassignment.BackendWebshopAssignmentApplication for test class com.example.backendwebshopassignment.Controller.OrderControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.6)
+
+2023-05-03T10:13:13.620+02:00  INFO 29181 --- [    Test worker] c.e.b.Controller.OrderControllerTest     : Starting OrderControllerTest using Java 18.0.2 with PID 29181 (started by svantesodergard in /home/svantesodergard/IdeaProjects/BackendWebshopAssignment/BackendWebshopAssignment)
+2023-05-03T10:13:13.621+02:00  INFO 29181 --- [    Test worker] c.e.b.Controller.OrderControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2023-05-03T10:13:13.716+02:00  INFO 29181 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-03T10:13:13.725+02:00  INFO 29181 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2023-05-03T10:13:13.849+02:00  INFO 29181 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-03T10:13:13.878+02:00  INFO 29181 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-05-03T10:13:13.894+02:00  INFO 29181 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67e255cf
+2023-05-03T10:13:13.894+02:00  INFO 29181 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-05-03T10:13:13.895+02:00  INFO 29181 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-03T10:13:13.961+02:00  INFO 29181 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-03T10:13:13.962+02:00  INFO 29181 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03T10:13:13.993+02:00  WARN 29181 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-03T10:13:14.127+02:00  INFO 29181 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-05-03T10:13:14.127+02:00  INFO 29181 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-03T10:13:14.127+02:00  INFO 29181 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-05-03T10:13:14.133+02:00  INFO 29181 --- [    Test worker] c.e.b.Controller.OrderControllerTest     : Started OrderControllerTest in 0.542 seconds (process running for 10.754)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
