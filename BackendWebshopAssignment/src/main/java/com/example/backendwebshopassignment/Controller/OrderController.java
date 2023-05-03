@@ -7,7 +7,6 @@ import com.example.backendwebshopassignment.models.Item;
 import com.example.backendwebshopassignment.repository.CustomerRepo;
 import com.example.backendwebshopassignment.repository.ItemRepo;
 import com.example.backendwebshopassignment.repository.OrderRepo;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -40,7 +39,7 @@ public class OrderController {
     }
 
     @PostMapping("/items/{itemId}/buy/{customerId}")
-    public String addOrder(@PathVariable Long itemId, @PathVariable Long customerId){
+    public @ResponseBody String addOrder(@PathVariable Long itemId, @PathVariable Long customerId){
         Item item = itemRepo.findById(itemId).orElse(null);
         List<Item> itemList = Arrays.asList(item);
         Customer customer = customerRepo.findById(customerId).orElse(null);
@@ -59,9 +58,6 @@ public class OrderController {
     public String addOrderForm(@RequestParam Long orderId, Model model) {
         Iterable<Item> items = orderRepo.findById(orderId).orElse(null).getItemList();
         model.addAttribute("items", items);
-        return "addOrder";
+        return "getCart";
     }
-
-
-
 }
