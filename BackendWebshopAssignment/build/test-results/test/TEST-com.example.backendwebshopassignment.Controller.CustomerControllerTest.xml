@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.backendwebshopassignment.Controller.CustomerControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-05-03T08:13:12" hostname="Sticker-PC" time="0.344">
+  <properties/>
+  <testcase name="testAddCustomer()" classname="com.example.backendwebshopassignment.Controller.CustomerControllerTest" time="0.202"/>
+  <testcase name="findCustomerById()" classname="com.example.backendwebshopassignment.Controller.CustomerControllerTest" time="0.099"/>
+  <testcase name="findCustomers()" classname="com.example.backendwebshopassignment.Controller.CustomerControllerTest" time="0.03"/>
+  <system-out><![CDATA[2023-05-03T10:13:11.517+02:00  INFO 29181 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.backendwebshopassignment.Controller.CustomerControllerTest]: CustomerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-03T10:13:11.535+02:00  INFO 29181 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.backendwebshopassignment.BackendWebshopAssignmentApplication for test class com.example.backendwebshopassignment.Controller.CustomerControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.6)
+
+2023-05-03T10:13:11.574+02:00  INFO 29181 --- [    Test worker] c.e.b.Controller.CustomerControllerTest  : Starting CustomerControllerTest using Java 18.0.2 with PID 29181 (started by svantesodergard in /home/svantesodergard/IdeaProjects/BackendWebshopAssignment/BackendWebshopAssignment)
+2023-05-03T10:13:11.575+02:00  INFO 29181 --- [    Test worker] c.e.b.Controller.CustomerControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2023-05-03T10:13:11.741+02:00  INFO 29181 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-03T10:13:11.748+02:00  INFO 29181 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2023-05-03T10:13:11.914+02:00  INFO 29181 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-03T10:13:11.918+02:00  INFO 29181 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-05-03T10:13:11.950+02:00  INFO 29181 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ceb368b
+2023-05-03T10:13:11.950+02:00  INFO 29181 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-05-03T10:13:11.954+02:00  INFO 29181 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-03T10:13:12.169+02:00  INFO 29181 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-03T10:13:12.169+02:00  INFO 29181 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03T10:13:12.361+02:00  WARN 29181 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-03T10:13:12.615+02:00  INFO 29181 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-05-03T10:13:12.615+02:00  INFO 29181 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-03T10:13:12.619+02:00  INFO 29181 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-05-03T10:13:12.638+02:00  INFO 29181 --- [    Test worker] c.e.b.Controller.CustomerControllerTest  : Started CustomerControllerTest in 1.098 seconds (process running for 9.259)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
