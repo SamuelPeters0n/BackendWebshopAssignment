@@ -62,13 +62,6 @@ public class CustomerControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().json(asJsonString(customerRepo.findById(1L).orElse(null))));
 
-       /*
-        this.mockMvc.perform(get("/customer/1"))
-                .andExpect(status().isOk())
-                .andExpect(content().json("{\"name\":\"test1\",\"id\":1, \"ssn\":\"1111\"}"));
-
-         */
-
     }
 
     @Test
